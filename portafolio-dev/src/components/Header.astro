@@ -1,0 +1,91 @@
+<header class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
+	<nav class="fixed inset-0 bg-black bg-opacity-75 flex-col items-center justify-center md:bg-transparent md:static md:flex md:flex-row md:items-center z-50 hidden">
+		<a
+			class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+			href="#top"
+			>Inicio</a
+		>
+		<a
+			class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+			href="#experiencia"
+			>Experiencia</a
+		>
+		<a
+			class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+			href="#proyectos"
+			>Proyectos</a
+		>
+		<a
+			class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+			href="#sobre-mi"
+			>Sobre mí</a
+		>
+        <a
+        class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+        href="#education"
+        >Formación</a
+    >
+		<a
+			class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+			href="#contacto"
+			>Contacto</a
+		>
+	</nav>
+</header>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+      const sections = document.querySelectorAll("section")
+      const navItems = document.querySelectorAll("header nav a")
+      
+      console.log(navItems,"nav items")
+      const callback = (entries: any[]) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            navItems.forEach((item) => {
+              if (item.getAttribute("aria-label") == entry.target.id) {
+                item.classList.add("text-yellow-500")
+              } else {
+                item.classList.remove("text-yellow-500")
+              }
+            })
+          }
+        })
+      }
+  
+      const observer = new IntersectionObserver(callback, {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.3,
+      })
+  
+      sections.forEach((section) => {
+        observer.observe(section)
+      })
+  
+      // Cleanup function
+      document.onvisibilitychange = () => {
+        if (document.visibilityState === "hidden") {
+          observer.disconnect()
+        } else {
+          sections.forEach((section) => {
+            observer.observe(section)
+          })
+        }
+      }
+    })
+  </script>
+  
+  <style>
+    nav {
+      animation: nav-shadown 1s linear both;
+      animation-timeline: scroll();
+      animation-range: 0 100px;
+    }
+  
+    @keyframes nav-shadown {
+      to {
+        @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10;
+      }
+    }
+  </style>

@@ -1,0 +1,18 @@
+---
+import GitHub from "./icons/GitHub.astro"
+import PlayApp from "./icons/PlayApp.astro"
+const {gitHub,realeseLink} = Astro.props
+---
+
+
+
+<footer class="flex items-end justify-start mt-2 gap-x-4">
+    <a
+        href={gitHub}
+        class="inline-flex items-center justify-center gap-2 px-3 py-1 h-12 space-x-2  text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+    ><GitHub class="size-2"></GitHub>Codigo</a>
+        <a
+        href={realeseLink}
+        class="inline-flex items-center justify-center gap-2 px-3 py-1 h-12 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+    ><PlayApp class="size-5"></PlayApp>Probar</a>
+</footer>

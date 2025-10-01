@@ -1,0 +1,25 @@
+---
+const { field, period, institution, status, icon } = Astro.props
+---
+
+<div class="p-5 mb-4 border border-gray-500 rounded-lg  dark:bg-gray-800/10 dark:border-gray-900">
+	<time class="text-lg font-semibold text-cyan-300/90">{period}</time>
+	<ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
+		<li>
+			<!-- Condición para renderizar un enlace solo si {link} está definido -->
+			<a
+				href="/formacion"
+				class="flex flex-row justify-between w-full items-center  dark:hover:bg-gray-900 dark:hover:rounded-lg md:p-2">
+				<!-- Contenido del enlace aquí -->
+				<div class="flex flex-row items-center">
+					<img
+						class="w-12 h-12 mb-3 me-3 rounded-full sm:mb-0"
+						src={icon}
+						
+					/>
+					<div class="text-gray-600 dark:text-gray-400"><div class="text-base font-normal"><span class="font-medium text-white"> {field}</span></div> <div class="text-sm font-normal">{status}</div> <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400"> {institution}</span></div>
+				</div>
+			</a>
+		</li>
+	</ol>
+</div>

@@ -1,0 +1,44 @@
+---
+import ExperienceItem from "./icons/ExperienceItem.astro"
+const EXPERIENCIE = [
+	{
+		date: "feb. 2022 - abr. 2024 · 2 años 3 meses",
+		title: "Analista Desarrollador Lit Element - Proyecto BBVA",
+		company: "Stefanini Group · Jornada completa",
+		description: [
+			"Desarrollo de aplicaciones web interactivas utilizando Lit-element, Polymer 2, HTML5, CSS, SASS y JavaScript, optimizando la experiencia del usuario.",
+			"Colaboración en la definición y mejora de los flujos de la aplicación BBVA en el front-end, asegurando una navegación intuitiva y eficiente.",
+			"Resolución de errores y corrección de bugs en la aplicación de BBVA, mejorando la calidad y estabilidad del producto.",
+			"Utilización efectiva de comandos de Git para el control de versiones, facilitando la colaboración y el seguimiento del código.",
+			"Trabajo exitoso en un entorno Scrum y Agile, cumpliendo con los objetivos y entregas en tiempos establecidos.",
+			"Contribución en la definición y gestión de funcionalidades, asegurando una implementación adecuada y alineada con las necesidades del negocio.",
+			"Aplicación de conocimientos en componentes web (Web Components) basados en estándares web, mejorando la eficiencia y mantenibilidad del código.",
+			"Realización de pruebas end-to-end (E2E) utilizando WebdriverIO y Gherkin, garantizando la calidad y funcionalidad integral de la aplicación.",
+		],
+
+		
+	},
+	{
+		date: "dic. 2021 - feb. 2022 · 3 meses",
+		title: "Analista Desarrollador Lit Element - Proyecto BBVA",
+		company: "IGH Ingenieria - Soluciones E-Business & Odoo Partner · Jornada completa",
+		description: [
+			"Desarrollo de aplicaciones web interactivas utilizando Lit-element, Polymer 2, HTML5, CSS, SASS y JavaScript, optimizando la experiencia del usuario.",
+			"Colaboración en la definición y mejora de los flujos de la aplicación BBVA en el front-end, asegurando una navegación intuitiva y eficiente.",
+			"Utilización efectiva de comandos de Git para el control de versiones, facilitando la colaboración y el seguimiento del código.",
+			"Trabajo exitoso en un entorno Scrum y Agile, cumpliendo con los objetivos y entregas en tiempos establecidos.",
+			"Realización de pruebas end-to-end (E2E) utilizando WebdriverIO y Gherkin, garantizando la calidad y funcionalidad integral de la aplicación.",
+		],
+	},
+]
+---
+
+<ol class="relative mt-16">
+	{
+		EXPERIENCIE.map((experiencie) => (
+			<li class="">
+				<ExperienceItem {...experiencie} />
+			</li>
+		))
+	}
+</ol>

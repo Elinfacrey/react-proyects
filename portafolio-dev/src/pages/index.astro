@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro"
+import LinkedInIcon from "../components/icons/LinkeIn.astro"
+import GitHubIcon from "../components/icons/GitHub.astro"
+import BriefCaseIcon from "../components/icons/BriefCase.astro"
+import CodeIcon from "../components/icons/Code.astro"
+import SectionContainer from "../components/SectionContainer.astro"
+import SocialPill from "../components/icons/SocialPill.astro"
+import CVIcon from "../components/icons/CV.astro"
+import Experience from "../components/Experience.astro"
+import EducationIcon from "../components/icons/EducationIcon.astro"
+import Projects from "../components/Projects.astro"
+import Footer from "../components/Footer.astro"
+import Contact from "../components/Contact.astro"
+import ContactIcon from "../components/icons/ContactIcon.astro"
+import AboutMeIcon from "../components/icons/AboutMeIcon.astro"
+import AboutMe from "../components/AboutMe.astro"
+import Education from "../components/Education.astro"
+---
+
+<Layout title="</> Portafolio | Josefranco Falla">
+	<main class="px-2">
+		<SectionContainer class="py-44 pb-20">
+			<div class="flex flex-row gap-x-5 mb-6">
+				<img
+				class="rounded-full size-12 mb-4"
+				src="./projects/yo2.jpg"
+				alt="desarrollador foto"
+			/>
+			<div class="flex items-center mb-3 ">
+				<span class="relative inline-flex overflow-hidden rounded-full p-[1px]"> <span class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#51E4B8_0%,#21554E_50%,#51E4B8_100%)]"></span> <div class="inline-flex items-center justify-center w-full px-3 py-1 text-sm text-green-800 bg-green-100 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white/80 backdrop-blur-3xl whitespace-nowrap"> Disponible para trabajar </div> </span>
+				
+			</div>
+			</div>
+			
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row  gap-x-4 pb-6 lg:pb-10">
+				Hola, Soy Josefranco Falla!
+				
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				Graduado en <span class="text-yellow-200/90 opacity-80">Sistemas de Información</span> y trabajando como <span class="text-yellow-200/90 opacity-80">Desarrollador Frontend</span>. Aportando mis conocimientos y hablidades en un nuevo desafío laboral, los invito a conocer mis proyectos y compartir mi experiencia en este portal.
+			</h2>
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/josefranco-oswaldo-falla-montes-3a8b16170/">
+					<LinkedInIcon class="size-4 md:size-6" />LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/Elinfacrey">
+					<GitHubIcon class="size-4 lg:size-6" />GitHub
+				</SocialPill>
+				<SocialPill class="flex flex-end">
+					<CVIcon class="size-4 lg:size-6" />Descargar CV
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+		<SectionContainer id="experiencia">
+			<h2 class="flex gap-x-2 items-center text-2xl font-semibold mb-4"><BriefCaseIcon /> Experiencia laboral</h2>
+
+			<Experience />
+		</SectionContainer>
+		<SectionContainer id="proyectos">
+			<h2 class="flex gap-x-2 items-center text-2xl font-semibold mb-4"><CodeIcon class="size-10" /> Proyectos</h2>
+			<Projects></Projects>
+		</SectionContainer>
+		<SectionContainer id="sobre-mi">
+			<h2 class="flex gap-x-2 items-center text-2xl font-semibold mb-4"><AboutMeIcon class="size-10" /> Sobre mí</h2>
+			<AboutMe></AboutMe>
+		</SectionContainer>
+		<SectionContainer id="education">
+			<h2 class="flex gap-x-2 items-center text-2xl font-semibold mb-4"><EducationIcon class="size-10" /> Formación Académica</h2>
+			<Education></Education>
+		</SectionContainer>
+		<SectionContainer id="contacto">
+			<h2 class="flex gap-x-2 items-center text-2xl font-semibold mb-4"><ContactIcon class="size-10" /> Contacto</h2>
+			<Contact></Contact>
+		</SectionContainer>
+	
+		<Footer></Footer>
+	</main>
+</Layout>

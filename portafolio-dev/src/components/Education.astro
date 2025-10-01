@@ -1,0 +1,26 @@
+---
+import EducationCard from "./EducationCard.astro"
+
+const academicTraining = [
+	{
+		field: "Sistemas de Información",
+		
+		period: "2017-2021",
+        institution:"ISIL",
+        status: "Completed",
+        icon:"./projects/logo_isil_negativo.jpg"
+	},
+    {
+		field: "Lengua Inglesa",
+		
+		period: "2014-2017",
+        institution:"UNMSM",
+        status: "Completed - Nivel Avanzado",
+        icon:"./projects/imagesCeid.png"
+	}
+]
+---
+
+{academicTraining.map(education => (
+    <EducationCard {...education} ></EducationCard>
+))}

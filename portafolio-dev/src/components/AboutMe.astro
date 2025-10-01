@@ -1,0 +1,36 @@
+---
+import CVIcon from "./icons/CV.astro"
+---
+
+<article class="flex flex-col items-center justify-center gap-8 text-gray-500 dark:text-gray-300 md:flex-row">
+	<div class="[&>p]:mb-4 [&>p>strong]:text-yellow-500 dark:[&>p>strong]:text-yellow-100 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1">
+		<p>
+			Me llamo Josefranco Falla y soy Técnico en Sistemas. Empecé con la curiosidad de cómo se construye una página web. Y actualmente me vengo desempeñando como <strong>Front End Developer</strong> con más de dos años de experiencia .
+		</p>
+
+		<p>
+			Algunos de mis logors incluyen <strong>colaborar con BBVA para el desarrollo de software de productos de Seguros</strong>. Pude colaborar en distintos productos tanto aplicativos como la creación de componentes para ejecutivos como para personas naturales que ya están en producción.
+		</p>
+
+		<p>
+			Como Developer, <strong> He desarrollado diferente tipos de Aplicativos y componentes implementando diferentes librerías y frameworks tanto para el Frontend y Backend</strong>
+		</p>
+	</div>
+	<div class="md:order-1 flex flex-col-reverse gap-y-6 min-w-fit">
+		<img
+			width="200"
+			height="150"
+			src="./projects/yo2.jpg"
+			class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+			style="object-position: 50% 50%"
+		/>
+		<div class="md:flex items-end justify-center gap-x-4 hidden">
+			<a
+				href="https://drive.google.com/file/d/1FEVYv7wKv6j2Sm_MEZmYLp8ZLovpWLT-/view?usp=sharing"
+				role="link"
+				class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+				><CVIcon />Descargar CV</a
+			>
+		</div>
+	</div>
+</article>
